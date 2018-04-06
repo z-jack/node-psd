@@ -35,7 +35,7 @@ class PSDHeader {
   /**
    * @returns {String} the string description of color mode.
    */
-  mode() {
+  get mode() {
     switch (this._mode) {
       case 0:
         return 'Bitmap'
@@ -61,7 +61,7 @@ class PSDHeader {
   /**
    * @returns {Boolean} the file header is valid or not
    */
-  valid() {
+  get valid() {
     return this.signature === '8BPS'
   }
 }

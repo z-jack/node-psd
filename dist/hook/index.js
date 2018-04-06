@@ -2,11 +2,11 @@ import { headerParser, cmParser, irParser, lmParser, imgParser } from '../parser
 
 /**
  * Hook the specific property
- * @param {PSD} psd 
+ * @param {Any} psd 
  * @param {String} prop 
  * @param {Function} func 
  */
-function hookProp(psd, prop, func) {
+export function hookProp(psd, prop, func) {
   Object.defineProperty(psd, prop, {
     enumerable: true,
     get() {

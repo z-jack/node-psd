@@ -8,11 +8,11 @@ export { headerParser, cmParser, irParser, lmParser, imgParser }
 
 /**
  * Create the read-only property
- * @param {PSD} psd 
+ * @param {Any} psd 
  * @param {String} prop 
  * @param {Function} func 
  */
-function defProp(psd, prop, func) {
+export function defProp(psd, prop, func) {
   Object.defineProperty(psd, prop, {
     enumerable: true,
     value: func.call(psd)
