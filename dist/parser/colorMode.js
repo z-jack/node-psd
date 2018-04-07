@@ -55,11 +55,11 @@ export default function parser() {
     if (buf.length > 0) {
       let length = buf.readInt32BE()
       cm.length = length
-    }
-    if (this.$config.lazy) {
-      hookProp(cm, 'colorTable', loadTable)
-    } else {
-      defProp(cm, 'colorTable', loadTable)
+      if (this.$config.lazy) {
+        hookProp(cm, 'colorTable', loadTable)
+      } else {
+        defProp(cm, 'colorTable', loadTable)
+      }
     }
   }
   return cm

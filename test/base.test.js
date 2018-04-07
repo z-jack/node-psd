@@ -30,6 +30,9 @@ describe('parser', () => {
     assert.equal(indexed.colorMode.length, 768)
     assert.equal(duotone.colorMode.length, 524)
   })
+  it('image resources', ()=>{
+    assert.notEqual(psd.imgRes.blocks.length, 0)
+  })
 })
 
 describe('lazy load', () => {
